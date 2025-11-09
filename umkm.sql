@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 08, 2025 at 01:43 PM
+-- Generation Time: Nov 09, 2025 at 02:51 AM
 -- Server version: 8.4.3
 -- PHP Version: 7.4.33
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cart` (
   `id` int NOT NULL,
   `user_id` int NOT NULL,
-  `kode_barang` char(10) NOT NULL,
+  `kode_barang` char(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `quantity` int NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -60,7 +60,7 @@ CREATE TABLE `tb_barang` (
 CREATE TABLE `tb_pembelian` (
   `kode_pembelian` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `tgl_pembelian` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `kode_barang` varchar(10) DEFAULT NULL,
+  `kode_barang` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `id_user` int DEFAULT NULL,
   `nama_barang` varchar(100) DEFAULT NULL,
   `jumlah_barang` int NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama`, `username`, `password`, `no_hp`, `alamat`, `role`, `created_at`) VALUES
-(1, 'RIAN', 'admin', '$2y$10$gp73d6zNUAkj2OSDrYCd7uV0m2zfr.Quw77JVxJGwMI5TbPDjfTaK', '6281269766179', 'PONDOK INDAH', 'admin', '2025-11-08 13:39:53');
+(1, 'admin', 'admin', '$2y$10$jzFpWJFY//oev6NfSpye9ODAXnmt/92Ybq4a6eLjU7ITPQ1UriVMm', '6281269766179', 'JAHARUN B', 'admin', '2025-11-09 02:47:42');
 
 --
 -- Indexes for dumped tables
