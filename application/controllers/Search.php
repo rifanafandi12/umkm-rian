@@ -42,13 +42,17 @@ class Search extends CI_Controller
             }
         }else{
             echo "
-                <div class='position-relative'>
-                <div class='card-body'>
-                    <h4 class='bg-danger'>Data Tidak Ditemukan</h4>
-                </div>
-                </div>
+                <div class='text-center py-5'>
+          <div class='empty-icon mb-4'>
+            <i class='fas fa-cookie-bite fa-4x text-muted'></i>
+          </div>
+          <h5 class='text-brown mb-3'>Kue yang anda cari Belum ada nih</h5>
+          <p class='text-muted mb-4'>Coba cari kue lain yuk.</p>
+          <a href=". base_url('home') ." class='btn btn-bakery-success btn-lg'>
+            <i class='fas fa-search me-2'></i> Lihat yang lain
+          </a>
+        </div>
             ";
         }
-        $this->load->view('home/scriptModal');
     }
 }

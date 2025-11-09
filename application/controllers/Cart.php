@@ -109,7 +109,7 @@ class Cart extends CI_Controller
             ];
         }
 
-        $wa_admin = '681269766179';
+        $wa_admin = '6281269766179';
         $send_message = "Hello, saya *". $nama_user . "* ingin memesan:\n" .
         "Kode Pembelian: *". $kode_pembelian . "*".
             $pesan . "\n".

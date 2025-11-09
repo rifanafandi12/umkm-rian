@@ -38,7 +38,7 @@ class Auth extends CI_Controller
                 redirect('home');
             }
         } else {
-            $this->session->set_flashdata('error', 'username belum terdaftar');
+            $this->session->set_flashdata('error', 'username atau password salah!');
         }
 
         redirect('auth');

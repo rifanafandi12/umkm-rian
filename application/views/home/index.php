@@ -66,9 +66,18 @@
                              <p class="deskripsi">Kue red velvet lembut dengan cream cheese frosting yang creamy. Dibuat dengan bahan premium dan tanpa pengawet.</p>
 
                              <div class="quantity-control">
-                                 <button class="btn btn-outline-secondary" id="decrease-qty">-</button>
-                                 <input type="number" class="form-control text-center" id="quantity" value="1" min="1">
-                                 <button class="btn btn-outline-secondary" id="increase-qty">+</button>
+                                 <div class="row ">
+                                     <div class="col-lg-2">
+                                         <button class="btn btn-outline-secondary" id="decrease-qty">-</button>
+                                     </div>
+                                     <div class="col-lg-6">
+                                         <input type="number" class="form-control text-center" id="quantity" value="1" min="1">
+                                     </div>
+                                     <div class="col-lg-2">
+                                         <button class="btn btn-outline-secondary" id="increase-qty">+</button>
+
+                                     </div>
+                                 </div>
                              </div>
 
                              <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">

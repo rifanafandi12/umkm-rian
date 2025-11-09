@@ -22,4 +22,30 @@ class Home extends CI_Controller
         $this->load->view('home/footer');
     }
 
+    public function beli()
+    {
+        $data = [
+            "kode_pembelian" => generate_kode_pembelian(),
+            "kode_barang" => $this->input->post('kode_barang'),
+            'id_user' => $this->session->userdata('user_id'),
+            "nama_barang" => $this->input->post('nama_barang'),
+            "jumlah_barang" => $this->input->post('jumlah_barang'),
+            "harga_barang" => $this->input->post('harga_barang'),
+            "total_harga" => $this->input->post('total_harga')
+        ];
+        $this->db->insert('tb_pembelian', $data);   
+        
+        if($this->db->affected_rows() > 0){
+            echo json_encode([
+                "status" => 'success',
+                "message" => 'Pembelian berhasil dibuat!'
+            ]);
+        }else{
+            echo json_encode([
+                "status" => 'error',
+                "message" => 'Terjadi Kesalahan silahkan hubungi admin'
+            ]);
+        }
+
+    }
 }

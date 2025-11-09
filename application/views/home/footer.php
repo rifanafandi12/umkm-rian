@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Tokoh Kue Rian. All rights reserved. | Made with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+                <p>&copy; 2025 Tokoh Kue Rian. All rights reserved. | Made with Rian</p>
             </div>
         </div>
     </footer>
